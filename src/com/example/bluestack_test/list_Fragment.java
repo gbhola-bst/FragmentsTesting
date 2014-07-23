@@ -35,7 +35,7 @@ public class list_Fragment extends Fragment implements OnItemClickListener{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		contents = new ArrayList<String>();
-
+		
 		int fragno = getArguments().getInt("fragno");
 		for(int i=0; i<20;i++)
 			contents.add("Item no "+i+" of fragment: "+fragno);
@@ -57,10 +57,6 @@ public class list_Fragment extends Fragment implements OnItemClickListener{
 		super.onActivityCreated(savedInstanceState);
 		listview.setAdapter(adapter);
 		adapter.notifyDataSetChanged();
-		
-		
-		
-		
 	}
 
 	@Override

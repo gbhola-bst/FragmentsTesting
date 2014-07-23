@@ -5,6 +5,7 @@ import java.util.Stack;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.animation.ObjectAnimator;
@@ -29,7 +30,7 @@ import android.widget.Toast;
 import android.os.Build;
 import android.provider.ContactsContract.CommonDataKinds.Relation;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends FragmentActivity{
 	Stack<Fragment> S;
 	Fragment crrntfrag;
 	
@@ -63,6 +64,7 @@ public class MainActivity extends ActionBarActivity {
     
     public void showFragment(Fragment frag)
     {
+    	
     	FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
     	ft.replace(R.id.container, frag);
     	ft.commit();
