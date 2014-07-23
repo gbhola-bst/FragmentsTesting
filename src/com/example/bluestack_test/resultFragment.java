@@ -25,7 +25,7 @@ public class resultFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		view = inflater.inflate(R.layout.result_activity_layout, null);
+		view = inflater.inflate(R.layout.result_fragment_layout, null);
 		
 		((TextView)view.findViewById(R.id.textView1)).setText( getArguments().getString("data")  );
 		return view;
